@@ -49,6 +49,9 @@
     font-size: 15px;
     cursor: pointer;
 }
+.login-popup-container button:hover{
+    background-color: rgb(95, 10, 95);
+}
 .login-popup-condition{
     display: flex;
     align-items: start;
