@@ -3,7 +3,7 @@
     height: 50px;
     border-radius: 50%;
     border: none;
-    background-color: rgb(235, 45, 12);;
+    background-color: #A22827;
     z-index: 5;
     color: white;
     font-size: 30px;
@@ -15,7 +15,7 @@
     margin: auto;
 }
 .scroll-btn:hover{
-    background-color: rgb(179, 45, 21);
+    background-color: #8a1f1f;
     transition: 0.3s ease;
     transform: scale(1.2);
 }
