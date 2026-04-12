@@ -27,12 +27,12 @@ const Footer = () => {
                <h2>GET IN TOUCH</h2>
                <ul>
                 <li>+250790395120</li>
-                <li>contact@tomato.com</li>
+                <li>contact@foodflow.com</li>
                </ul>
             </div>
         </div>
                 <hr />
-                <p className="footer-copyright">Copyright {new Date().getFullYear()} &copy; Tomato.com - All rights Reserved.</p>
+                <p className="footer-copyright">Copyright {new Date().getFullYear()} &copy; FoodFlow.com - All rights Reserved.</p>
     </div>
   )
 }
