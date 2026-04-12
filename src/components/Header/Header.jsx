@@ -4,25 +4,34 @@ function Header() {
   return (
     <div className='header'>
       <div className="header-contents">
-        <div className="header-badge">🍕 Fresh & Fast</div>
-        <h1>Delicious Food <br/>Delivered to Your Door</h1>
-        <p>Experience culinary excellence with our carefully curated menu. From local favorites to international cuisines, we bring restaurant-quality meals right to your doorstep.</p>
+        <div className="header-badge">🚀 Lightning Fast Delivery</div>
+        <h1>Crave It? <span className="highlight">We Deliver</span></h1>
+        <p>From sizzling street food to gourmet dining, FoodFlow brings your favorite meals to your doorstep. Track your order in real-time and enjoy hot, fresh food delivered within minutes.</p>
         <div className="header-buttons">
-          <button className="primary-btn">Order Now</button>
-          <button className="secondary-btn">View Menu</button>
+          <button className="primary-btn">🍔 Order Food Now</button>
+          <button className="secondary-btn">📱 Download App</button>
         </div>
-        <div className="header-stats">
-          <div className="stat">
-            <span className="stat-number">500+</span>
-            <span className="stat-label">Restaurants</span>
+        <div className="header-features">
+          <div className="feature">
+            <div className="feature-icon">⚡</div>
+            <div className="feature-text">
+              <strong>30-Min Delivery</strong>
+              <span>Or it's on us</span>
+            </div>
           </div>
-          <div className="stat">
-            <span className="stat-number">10k+</span>
-            <span className="stat-label">Happy Customers</span>
+          <div className="feature">
+            <div className="feature-icon">👨‍🍳</div>
+            <div className="feature-text">
+              <strong>1000+ Restaurants</strong>
+              <span>Local favorites & chains</span>
+            </div>
           </div>
-          <div className="stat">
-            <span className="stat-number">30min</span>
-            <span className="stat-label">Avg Delivery</span>
+          <div className="feature">
+            <div className="feature-icon">💳</div>
+            <div className="feature-text">
+              <strong>Easy Payment</strong>
+              <span>Cash, card & digital</span>
+            </div>
           </div>
         </div>
       </div>
