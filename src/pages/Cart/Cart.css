@@ -49,14 +49,14 @@
 .cart-total button{
     border: none;
     color: white;
-    background-color: tomato;
+    background-color: #A22827;
     width: max(15vw,200px);
     padding: 10px 0px;
     border-radius: 4px;
     cursor: pointer;
 }
 .cart-total button:hover{
-    background-color: rgb(206, 57, 30);
+    background-color: #8a1f1f;
 }
 .cart-promocode{
     flex: 1;
