@@ -4,9 +4,27 @@ function Header() {
   return (
     <div className='header'>
       <div className="header-contents">
-        <h2>Order your favourite food here</h2>
-        <p>Choose from a doverse menu featuring a delectable array of dishes crafted withe the finest ingedients and culinary expertise. Our mission is to satisfy your cravings and elevate your dinning experience , one delicious meal at a time.</p>
-        <button>View Menu</button>
+        <div className="header-badge">🍕 Fresh & Fast</div>
+        <h1>Delicious Food <br/>Delivered to Your Door</h1>
+        <p>Experience culinary excellence with our carefully curated menu. From local favorites to international cuisines, we bring restaurant-quality meals right to your doorstep.</p>
+        <div className="header-buttons">
+          <button className="primary-btn">Order Now</button>
+          <button className="secondary-btn">View Menu</button>
+        </div>
+        <div className="header-stats">
+          <div className="stat">
+            <span className="stat-number">500+</span>
+            <span className="stat-label">Restaurants</span>
+          </div>
+          <div className="stat">
+            <span className="stat-number">10k+</span>
+            <span className="stat-label">Happy Customers</span>
+          </div>
+          <div className="stat">
+            <span className="stat-number">30min</span>
+            <span className="stat-label">Avg Delivery</span>
+          </div>
+        </div>
       </div>
     </div>
   )

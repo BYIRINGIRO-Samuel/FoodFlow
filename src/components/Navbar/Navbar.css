@@ -4,8 +4,19 @@
     justify-content: space-between;
     align-items: center;
 }
-.navbar .logo{
-    width: 150px;
+.navbar .logo-text{
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6b35;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -0.5px;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo-text:hover{
+    color: #ff5722;
+    transform: scale(1.05);
 }
 .navbar-menu{
     display: flex;
@@ -51,8 +62,8 @@
 
 } 
 @media(max-width:1050px){
-    .navbar .logo{
-        width: 140px;
+    .navbar .logo-text{
+        font-size: 24px;
     }
     .navbar-menu{
         gap: 20px;
@@ -71,8 +82,8 @@
 }
 
 @media(max-width:900px){
-    .navbar .logo{
-        width: 120px;
+    .navbar .logo-text{
+        font-size: 22px;
     }
     .navbar-menu{
         gap: 15px;
