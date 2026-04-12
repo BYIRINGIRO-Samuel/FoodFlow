@@ -7,7 +7,7 @@
 .navbar .logo-text{
     font-size: 28px;
     font-weight: bold;
-    color: #ff6b35;
+    color: #A22827;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: -0.5px;
@@ -15,7 +15,7 @@
 }
 
 .navbar .logo-text:hover{
-    color: #ff5722;
+    color: #4CAF50;
     transform: scale(1.05);
 }
 .navbar-menu{
