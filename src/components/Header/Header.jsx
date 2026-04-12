@@ -3,13 +3,15 @@ import './Header.css'
 function Header() {
   return (
     <div className='header'>
-      <div className="header-contents">
-        <div className="header-badge">🚀 Lightning Fast Delivery</div>
-        <h1>Crave It? <span className="highlight">We Deliver</span></h1>
-        <p>From sizzling street food to gourmet dining, FoodFlow brings your favorite meals to your doorstep. Track your order in real-time and enjoy hot, fresh food delivered within minutes.</p>
-        <div className="header-buttons">
-          <button className="primary-btn">🍔 Order Food Now</button>
-          <button className="secondary-btn">📱 Download App</button>
+      <div className="header-container">
+        <div className="header-contents">
+          <div className="header-badge">🚀 Lightning Fast Delivery</div>
+          <h1>Crave It? <span className="highlight">We Deliver</span></h1>
+          <p>From sizzling street food to gourmet dining, FoodFlow brings your favorite meals to your doorstep. Track your order in real-time and enjoy hot, fresh food delivered within minutes.</p>
+          <div className="header-buttons">
+            <button className="primary-btn">🍔 Order Food Now</button>
+            <button className="secondary-btn">📱 Download App</button>
+          </div>
         </div>
         <div className="header-features">
           <div className="feature">
