@@ -1,21 +1,11 @@
 .header{
-    min-height: 100vh;
+    height: 70vh;
     margin: 0;
-    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    background: #ffffff;
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
 }
 
 .header-contents{
@@ -32,101 +22,139 @@
 }
 
 .header-badge {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #A22827;
     color: white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-block;
     animation: pulse 2s infinite;
+    box-shadow: 0 4px 15px rgba(162, 40, 39, 0.3);
 }
 
 .header-contents h1{
-    font-weight: 800;
-    color: white;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #2c3e50;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.1;
     margin: 0;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+}
+
+.header-contents .highlight {
+    color: #A22827;
+    text-shadow: none;
 }
 
 .header-contents p{
-    color: rgba(255, 255, 255, 0.9);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.6;
+    color: #5a6c7d;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    line-height: 1.7;
     margin: 0;
-    max-width: 500px;
+    max-width: 550px;
+    font-weight: 400;
 }
 
 .header-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 0.5rem;
 }
 
 .header-contents button {
     border: none;
-    font-weight: 600;
+    font-weight: 700;
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .primary-btn {
-    background: white;
-    color: #764ba2;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: #A22827;
+    color: white;
+    box-shadow: 0 10px 30px rgba(162, 40, 39, 0.4);
 }
 
 .primary-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(162, 40, 39, 0.5);
 }
 
 .secondary-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid #4CAF50;
 }
 
 .secondary-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-3px);
+    border-color: #4CAF50;
 }
 
-.header-stats {
+.header-features {
     display: flex;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
-.stat {
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(76, 175, 80, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateY(-2px);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A22827;
+    border-radius: 10px;
+    color: white;
+}
+
+.feature-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
-.stat-number {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    display: block;
+.feature-text strong {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.stat-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.feature-text span {
+    color: #5a6c7d;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
 }
 
 
@@ -151,7 +179,7 @@
         padding: 0 1.5rem;
     }
     
-    .header-stats {
+    .header-features {
         gap: 1.5rem;
     }
 }
@@ -173,7 +201,7 @@
     }
     
     .header-contents p {
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: clamp(1rem, 3vw, 1.2rem);
     }
     
     .header-buttons {
@@ -185,15 +213,26 @@
         font-size: 0.9rem;
     }
     
-    .header-stats {
+    .header-features {
         gap: 1rem;
+        flex-direction: column;
     }
     
-    .stat-number {
+    .feature {
+        padding: 0.875rem 1.25rem;
+    }
+    
+    .feature-icon {
+        width: 35px;
+        height: 35px;
         font-size: 1.25rem;
     }
     
-    .stat-label {
+    .feature-text strong {
+        font-size: 0.9rem;
+    }
+    
+    .feature-text span {
         font-size: 0.8rem;
     }
 }
@@ -201,6 +240,11 @@
 @media(max-width:480px) {
     .header-contents h1 {
         font-size: clamp(1.75rem, 10vw, 2.5rem);
+    }
+    
+    .header-badge {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
     }
     
     .header-buttons {
@@ -211,10 +255,25 @@
     .header-contents button {
         width: 100%;
         text-align: center;
+        justify-content: center;
     }
     
-    .header-stats {
-        justify-content: space-around;
-        width: 100%;
+    .feature {
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+    }
+    
+    .feature-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1rem;
+    }
+    
+    .feature-text strong {
+        font-size: 0.85rem;
+    }
+    
+    .feature-text span {
+        font-size: 0.75rem;
     }
 }
