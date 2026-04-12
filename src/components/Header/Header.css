@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;  
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 600px;
     flex: 1;
     margin-top: 2rem;
@@ -65,6 +65,7 @@
     display: inline-block;
     animation: pulse 2s infinite;
     box-shadow: 0 4px 15px rgba(162, 40, 39, 0.3);
+    margin-top: 8px;
 }
 
 .header-contents h1{
@@ -80,6 +81,7 @@
 .header-contents .highlight {
     color: #A22827;
     text-shadow: none;
+     font-family: "Luckiest Guy", cursive;
 }
 
 .header-contents p{
@@ -96,6 +98,7 @@
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 0.5rem;
+    margin-bottom: 3rem;
 }
 
 .header-contents button {
