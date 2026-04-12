@@ -1,24 +1,58 @@
 .header{
     height: 70vh;
     margin: 0;
-    background: #ffffff;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 
-.header-contents{
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.header-container {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;  
-    align-items: flex-start;
-    gap: 2rem;
-    max-width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    gap: 4rem;
     animation: slideInUp 1s ease-out;
+}
+
+.header-contents{
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 600px;
+    flex: 1;
+    margin-top: 2rem;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.header-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 0 0 300px;
 }
 
 .header-badge {
@@ -174,26 +208,39 @@
     50% { transform: scale(1.05); }
 }
 @media(max-width:1050px){
-    .header-contents{
-        max-width: 500px;
+    .header-container {
+        gap: 3rem;
         padding: 0 1.5rem;
     }
     
+    .header-contents{
+        max-width: 500px;
+    }
+    
     .header-features {
-        gap: 1.5rem;
+        flex: 0 0 250px;
+        gap: 1.2rem;
     }
 }
 
 @media(max-width:750px){
     .header {
+        height: auto;
         min-height: 90vh;
-        padding: 2rem 0;
+        padding: 3rem 0;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 0 1rem;
     }
     
     .header-contents{
         max-width: 100%;
-        padding: 0 1rem;
         gap: 1.5rem;
+        text-align: center;
+        align-items: center;
     }
     
     .header-contents h1 {
@@ -214,8 +261,10 @@
     }
     
     .header-features {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
         gap: 1rem;
-        flex-direction: column;
     }
     
     .feature {
@@ -238,6 +287,14 @@
 }
 
 @media(max-width:480px) {
+    .header {
+        padding: 2rem 0;
+    }
+    
+    .header-container {
+        gap: 2rem;
+    }
+    
     .header-contents h1 {
         font-size: clamp(1.75rem, 10vw, 2.5rem);
     }
