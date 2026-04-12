@@ -45,12 +45,12 @@
     padding: 10px;
     border-radius: 4px;
     color: white;
-    background-color: tomato;
+    background-color: #A22827;
     font-size: 15px;
     cursor: pointer;
 }
 .login-popup-container button:hover{
-    background-color: rgb(95, 10, 95);
+    background-color: #8a1f1f;
 }
 .login-popup-condition{
     display: flex;
@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 .login-popup p span{
-    color: tomato;
+    color: #A22827;
     font-weight: 500;
     cursor: pointer;
 }
