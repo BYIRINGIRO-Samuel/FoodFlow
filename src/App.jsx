@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
@@ -7,16 +7,26 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
 import ScrollButton from './components/ScrollButton/ScrollButton'
 import LoginPopup from './components/LoginPopup/LoginPopup'
+import Preloader from './components/Preloader/Preloader'
 
 function App() {
 
   const[showLogin,setShowLogin]=useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
+      {loading && <Preloader />}
       {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> :<></>}
 
-   <div className='app'>
+   <div className={`app ${loading ? 'loading-hidden' : ''}`}>
       <Navbar setShowLogin={setShowLogin} />
       <ScrollButton/>
       <Routes>
