@@ -7,7 +7,7 @@ import { StoreContext } from '../../Context/StoreContent';
 function Navbar({setShowLogin}) {
   
     const[menu,setMenu]=useState("home");
-    const {getTotalCartAmount, food_list, theme, toggleTheme} = useContext(StoreContext); 
+    const {getTotalCartAmount, food_list} = useContext(StoreContext); 
 
     const [searchQuery, setSearchQuery] = useState("");
     const [showResults, setShowResults] = useState(false);
@@ -55,9 +55,6 @@ function Navbar({setShowLogin}) {
                 )}
               </div>
             )}
-          </div>
-          <div className="theme-toggle" onClick={toggleTheme} title="Toggle Theme">
-            {theme === "light" ? "🌙" : "☀️"}
           </div>
           <div className="nav-search">
                   <Link to={'/cart'}><img src={assets.basket_icon} alt="" /></Link>
