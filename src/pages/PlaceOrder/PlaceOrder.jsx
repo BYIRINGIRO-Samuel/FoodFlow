@@ -1,30 +1,38 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './PlaceOrder.css'
 import { StoreContext } from '../../Context/StoreContent'
+import LiveOrderTracker from '../../components/LiveOrderTracker/LiveOrderTracker';
 
 function PlaceOrder() {
 
   const{getTotalCartAmount}=useContext(StoreContext);
+  const [showTracker, setShowTracker] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowTracker(true);
+  }
 
   return (
-    <form className='place-order'>
+    <>
+    <form className='place-order' onSubmit={handleSubmit}>
       <div className="place-order-left">
-        <p className='title'>Dilvery Infomation</p>
+        <p className='title'>Delivery Information</p>
         <div className="multi-fields">
-          <input type="text" placeholder='First Name' />
-          <input type="text" placeholder='Last Name' />
+          <input type="text" placeholder='First Name' required/>
+          <input type="text" placeholder='Last Name' required/>
         </div>
-        <input type="text" placeholder='Email Address' />
-        <input type="text" placeholder='Street' />
+        <input type="text" placeholder='Email Address' required/>
+        <input type="text" placeholder='Street' required/>
         <div className="multi-fields">
-          <input type="text" placeholder='City' />
-          <input type="text" placeholder='State' />
+          <input type="text" placeholder='City' required/>
+          <input type="text" placeholder='State' required/>
         </div>
         <div className="multi-fields">
-          <input type="text" placeholder='Zip Code' />
-          <input type="text" placeholder='Country' />
+          <input type="text" placeholder='Zip Code' required/>
+          <input type="text" placeholder='Country' required/>
         </div>
-        <input type="text" placeholder='Phone' />
+        <input type="text" placeholder='Phone' required/>
       </div>
       <div className="place-order-right">
       <div className="cart-total">
@@ -45,11 +53,12 @@ function PlaceOrder() {
               <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button>PROCEED TO PAYMENT</button>
+          <button type='submit'>PROCEED TO PAYMENT</button>
         </div>
-
       </div>
     </form>
+    <LiveOrderTracker isOpen={showTracker} onClose={() => setShowTracker(false)} />
+    </>
   )
 }
 
