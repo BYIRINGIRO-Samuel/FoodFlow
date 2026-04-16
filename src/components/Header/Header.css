@@ -8,7 +8,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Background elements */
@@ -55,10 +55,12 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
     color: #ffd700;
 }
 
 .header-left h1 {
+    font-family: 'Luckiest Guy', cursive;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.1;
     font-weight: 800;
@@ -218,16 +220,6 @@
     .header-stats {
         justify-content: center;
     }
-    
-    .header-bottom-cards {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .food-card-mini {
-        flex: none;
-        width: 300px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -254,15 +246,5 @@
     
     .stat-number {
         font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-bottom-cards {
-        gap: 1rem;
-    }
-    
-    .food-card-mini {
-        width: 100%;
     }
 }
