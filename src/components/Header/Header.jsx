@@ -35,9 +35,6 @@ function Header() {
         <div className="header-right">
           <div className="hero-img-container">
             <img src={assets.hero_plate} alt="Delicious Food Plate" className="hero-main-img" />
-            <div className="floating-element garnish-1">🌿</div>
-            <div className="floating-element garnish-2">🌶️</div>
-            <div className="floating-element garnish-3">🍋</div>
           </div>
         </div>
       </div>
