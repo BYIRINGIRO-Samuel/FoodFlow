@@ -8,9 +8,6 @@ function Header() {
     <div className='header'>
       <div className="header-container">
         <div className="header-left">
-          <div className="header-badge">
-            <span className="badge-icon">🔥</span> Tasty food kitchen
-          </div>
           <h1>Eat Your Favorite Just How <span className="highlight">You Like It!</span></h1>
           <p>Discover the best food & drinks in your city. From sizzling street food to gourmet dining, we bring your favorite meals to your doorstep.</p>
           
