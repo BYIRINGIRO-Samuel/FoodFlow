@@ -1,0 +1,116 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.loader-ring {
+    width: 180px;
+    height: 180px;
+    border: 3px solid rgba(255, 255, 255, 0.05);
+    border-top: 3px solid #A22827;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+.loader-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loader-logo .logo-text {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 2;
+    position: relative;
+}
+
+.logo-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: rgba(162, 40, 39, 0.2);
+    border-radius: 50%;
+    animation: pulseLoader 2s infinite;
+    z-index: 1;
+}
+
+.loader-status {
+    margin-top: 40px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+.loader-decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.food-emoji {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: floatEmoji 4s linear infinite;
+}
+
+.food-emoji:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.food-emoji:nth-child(2) { top: 70%; left: 30%; animation-delay: 1s; }
+.food-emoji:nth-child(3) { top: 30%; left: 80%; animation-delay: 2s; }
+.food-emoji:nth-child(4) { top: 80%; left: 70%; animation-delay: 3s; }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseLoader {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes floatEmoji {
+    0% { transform: translateY(20px) scale(0.5); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+}
+
+/* Page entrance animation */
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
