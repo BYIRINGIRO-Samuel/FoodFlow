@@ -34,15 +34,34 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loader-logo .logo-text {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 2rem;
+    font-size: 2.22rem;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     z-index: 2;
     position: relative;
+    display: inline-block;
+    min-width: 160px; /* Prevent text jumping */
+}
+
+/* Typing cursor */
+.loader-logo .logo-text::after {
+    content: '|';
+    margin-left: 2px;
+    color: #A22827;
+    animation: cursorBlink 0.7s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .logo-pulse {
