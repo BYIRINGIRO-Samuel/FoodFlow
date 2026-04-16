@@ -4,7 +4,6 @@
     border-radius: 20px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
     transition: 0.3s;
     animation: fadeIn 1s;
     overflow: hidden;
@@ -12,7 +11,6 @@
 .food-item:hover{
     transform: translateY(-8px);
     box-shadow: 0px 10px 25px rgba(162, 40, 39, 0.15);
-    border-color: var(--primary-color);
 }
 .food-item-image{
     width: 100%;
