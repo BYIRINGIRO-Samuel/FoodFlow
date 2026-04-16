@@ -15,7 +15,13 @@ function FoodDisplay({category}) {
             <h2 className="section-title">✨ Recommended for You</h2>
             <div className="recommendations-list">
               {recommendations.map((item, index) => (
-                <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}/>
+                <div key={index} className="recommendation-item">
+                  <div className="rec-img-container">
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                  <p>{item.name}</p>
+                  <span>${item.price}</span>
+                </div>
               ))}
             </div>
           </div>
