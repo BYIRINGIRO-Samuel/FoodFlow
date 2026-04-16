@@ -38,6 +38,15 @@ a{
   width: 80%;
   margin: auto;
 }
+.loading-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.app {
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
 @keyframes fadeIn {
   0%{
       opacity: 0;
