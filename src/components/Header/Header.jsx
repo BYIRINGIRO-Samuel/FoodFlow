@@ -1,39 +1,46 @@
 import React from 'react'
 import './Header.css'
+import { assets } from '../../assets/assets'
+
 function Header() {
+
   return (
     <div className='header'>
       <div className="header-container">
-        <div className="header-contents">
-          <div className="header-badge">🚀 Lightning Fast Delivery</div>
-          <h1>Crave It? <span className="highlight">We Deliver</span></h1>
-          <p>From sizzling street food to gourmet dining, FoodFlow brings your favorite meals to your doorstep. Track your order in real-time and enjoy hot, fresh food delivered within minutes.</p>
+        <div className="header-left">
+          <div className="header-badge">
+            <span className="badge-icon">🔥</span> Tasty food kitchen
+          </div>
+          <h1>Eat Your Favorite Just How <span className="highlight">You Like It!</span></h1>
+          <p>Discover the best food & drinks in your city. From sizzling street food to gourmet dining, we bring your favorite meals to your doorstep.</p>
+          
           <div className="header-buttons">
-            <button className="primary-btn">🍔 Order Food Now</button>
-            <button className="secondary-btn">📱 Download App</button>
+            <button className="order-btn">Order Now</button>
+            <button className="menu-btn">See Menu</button>
+          </div>
+
+          <div className="header-stats">
+            <div className="stat-item">
+              <span className="stat-number">5,000+</span>
+              <span className="stat-label">Customers</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">2,100+</span>
+              <span className="stat-label">Orders</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">1,200+</span>
+              <span className="stat-label">Delivery</span>
+            </div>
           </div>
         </div>
-        <div className="header-features">
-          <div className="feature">
-            <div className="feature-icon">⚡</div>
-            <div className="feature-text">
-              <strong>30-Min Delivery</strong>
-              <span>Or it's on us</span>
-            </div>
-          </div>
-          <div className="feature">
-            <div className="feature-icon">👨‍🍳</div>
-            <div className="feature-text">
-              <strong>1000+ Restaurants</strong>
-              <span>Local favorites & chains</span>
-            </div>
-          </div>
-          <div className="feature">
-            <div className="feature-icon">💳</div>
-            <div className="feature-text">
-              <strong>Easy Payment</strong>
-              <span>Cash, card & digital</span>
-            </div>
+
+        <div className="header-right">
+          <div className="hero-img-container">
+            <img src={assets.hero_plate} alt="Delicious Food Plate" className="hero-main-img" />
+            <div className="floating-element garnish-1">🌿</div>
+            <div className="floating-element garnish-2">🌶️</div>
+            <div className="floating-element garnish-3">🍋</div>
           </div>
         </div>
       </div>
