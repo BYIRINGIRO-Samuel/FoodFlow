@@ -18,6 +18,13 @@ const StoreContextProvider = (props) => {
     }
 
     const [cartItems, setCartItems] = useState(() => {
+        const savedCart = localStorage.getItem("cartItems");
+        return savedCart ? JSON.parse(savedCart) : {};
+    });
+
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems]);
 
     const addToCart = (itemId) => {
         if (!cartItems[itemId]) {
