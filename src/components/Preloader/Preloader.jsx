@@ -28,12 +28,6 @@ const Preloader = () => {
                 </div>
                 <div className="loader-status">Preparing your feast...</div>
             </div>
-            <div className="loader-decorations">
-                <span className="food-emoji">🍕</span>
-                <span className="food-emoji">🍔</span>
-                <span className="food-emoji">🍣</span>
-                <span className="food-emoji">🍦</span>
-            </div>
         </div>
     );
 };
