@@ -4,7 +4,20 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-    const [cartItems, setCartItems] = useState({});
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem("theme") || "light";
+    });
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => prev === "light" ? "dark" : "light");
+    }
+
+    const [cartItems, setCartItems] = useState(() => {
 
     const addToCart = (itemId) => {
         if (!cartItems[itemId]) {
@@ -36,7 +49,9 @@ const StoreContextProvider = (props) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        theme,
+        toggleTheme
     }
     return (
         <StoreContext.Provider value={ContextValue}>
