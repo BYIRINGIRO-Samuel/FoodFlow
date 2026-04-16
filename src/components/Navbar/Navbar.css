@@ -133,26 +133,7 @@
     font-weight: 600;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    font-size: 20px;
-    cursor: pointer;
-    background: var(--card-bg);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    user-select: none;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1) rotate(15deg);
-    border-color: var(--primary-color);
-}
+/* Theme Toggle removed */
 
 .navbar button{
     background: transparent;
