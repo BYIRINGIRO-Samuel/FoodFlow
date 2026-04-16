@@ -1,14 +1,57 @@
-.food-display{
-    margin-top: 30px ;
+.food-display {
+    margin-top: 30px;
 }
-.food-display h2{
-    font-size: max(2vw,24px);
+
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 25px;
 }
-.food-display-list{
+
+/* Recommendations Section */
+.recommendations-container {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(162, 40, 39, 0.05) 0%, transparent 100%);
+    border-radius: 30px;
+    border: 1px dashed var(--border-color);
+}
+
+.recommendations-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Main Food List */
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     margin-top: 30px;
     gap: 30px;
     row-gap: 50px;
+}
+
+@media (max-width: 750px) {
+    .recommendations-container {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .recommendations-list {
+        display: flex;
+        overflow-x: scroll;
+        gap: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .recommendations-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .recommendations-list > * {
+        flex: 0 0 240px;
+    }
 }
